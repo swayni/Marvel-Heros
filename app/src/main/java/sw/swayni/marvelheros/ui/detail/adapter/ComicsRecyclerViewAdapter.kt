@@ -1,4 +1,4 @@
-package sw.swayni.marvelheros.ui.detail
+package sw.swayni.marvelheros.ui.detail.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

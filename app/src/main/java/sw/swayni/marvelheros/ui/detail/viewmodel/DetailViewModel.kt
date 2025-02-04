@@ -97,6 +97,6 @@ class DetailViewModel @Inject constructor(private val repository: IRepository, @
         is DetailAction.Error ->  state.copy(uiState = UiState.ERROR, comicDataContainer =null, isFavorite = null, errorCode = null, errorMessage = viewAction.errorMessage)
         is DetailAction.GetComics ->  state.copy(uiState = UiState.SUCCESS, comicDataContainer = viewAction.comicDataContainer, isFavorite = null, errorCode = null, errorMessage = null)
         is DetailAction.GetFavorite ->  state.copy(uiState = UiState.SUCCESS, comicDataContainer = null, isFavorite = viewAction.isGetFavorite, errorCode = null, errorMessage = null)
-        DetailAction.Loading -> state.copy(uiState = UiState.IDLE, comicDataContainer = null, isFavorite = null, errorCode = null, errorMessage = null)
+        DetailAction.Loading -> state.copy(uiState = UiState.LOADING, comicDataContainer = null, isFavorite = null, errorCode = null, errorMessage = null)
     }
 }

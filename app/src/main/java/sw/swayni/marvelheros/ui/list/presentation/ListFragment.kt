@@ -41,8 +41,6 @@ class ListFragment : BindingFragment<FragmentListBinding, ListViewModel>(R.layou
         }
     }
 
-    override fun observeData() {}
-
     override fun createdObserve() {
         observe(viewModel.uiStateFlow){
             when(it.uiState){

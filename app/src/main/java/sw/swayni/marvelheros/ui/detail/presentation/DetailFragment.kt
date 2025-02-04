@@ -12,7 +12,7 @@ import sw.swayni.base.mvvm.view.BindingFragment
 import sw.swayni.marvelheros.R
 import sw.swayni.marvelheros.data.model.CharacterModel
 import sw.swayni.marvelheros.databinding.FragmentDetailBinding
-import sw.swayni.marvelheros.ui.detail.ComicsRecyclerViewAdapter
+import sw.swayni.marvelheros.ui.detail.adapter.ComicsRecyclerViewAdapter
 import sw.swayni.marvelheros.ui.detail.viewmodel.DetailViewModel
 
 @AndroidEntryPoint
@@ -60,8 +60,6 @@ class DetailFragment : BindingFragment<FragmentDetailBinding, DetailViewModel>(R
             }
         }
     }
-
-    override fun observeData() {}
 
     override fun createdObserve() {
         observe(viewModel.uiStateFlow){

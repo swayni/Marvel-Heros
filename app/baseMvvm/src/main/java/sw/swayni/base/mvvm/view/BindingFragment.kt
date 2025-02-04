@@ -65,8 +65,6 @@ abstract class BindingFragment <B: ViewDataBinding, VM: ViewModel> constructor(
      */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
         createdObserve()
         observeNavigation()
     }
@@ -82,11 +80,9 @@ abstract class BindingFragment <B: ViewDataBinding, VM: ViewModel> constructor(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initUI()
-        observeData()
     }
 
     abstract fun initUI()
-    abstract fun observeData()
     abstract fun createdObserve()
 
     /**

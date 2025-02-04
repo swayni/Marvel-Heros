@@ -21,8 +21,6 @@ class FavoriteFragment : BindingFragment<FragmentFavoriteBinding, FavoriteViewMo
         viewModel.getFavoriteList()
     }
 
-    override fun observeData() { }
-
     override fun createdObserve() {
         observe(viewModel.uiStateFlow){
             showLoading(it.uiState)
